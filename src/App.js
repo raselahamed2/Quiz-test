@@ -1,10 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 function App() {
+  const router =  createBrowserRouter([
+
+  ])
   return (
     <div className="App">
-      <h1>this is quiz websit</h1>
+      <RouterProvider router = {router}></RouterProvider>
     </div>
   );
 }
