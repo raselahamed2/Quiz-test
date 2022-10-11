@@ -6,6 +6,7 @@ import Topics from '../src/componts/Topics/Topics'
 import Statistics from '../src/componts/Statistics/Statistics'
 import Blog from '../src/componts/Blog/Blog'
 import ErrorPage from './componts/ErrorPage/ErrorPage';
+import Quiz from './componts/Quiz/Quiz';
 
 function App() {
   const router =  createBrowserRouter([
@@ -21,12 +22,16 @@ function App() {
         },
         {
           path: '/statistics', 
-          loader: () => fetch('apiData.json'),
           element: <Statistics></Statistics>
         },
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/quiz',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz/${id'),
+          element: <Quiz></Quiz>
         }
       ]
       
