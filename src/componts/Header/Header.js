@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 const Header = () => {
 	const [open, setOpen] = useState(false)
     return (
-            <header className="p-4 fixed w-full dark:bg-gray-800 dark:text-gray-100 bg-cyan-100	">
+            <header className="p-4 w-full dark:bg-gray-800 dark:text-gray-100 bg-cyan-100	">
 	    <div className="container flex justify-between h-16 mx-auto">
 		<Link rel="noopener noreferrer" to="/" aria-label="Back to homepage" className="flex items-center p-2">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-8 h-8 dark:text-violet-400">
