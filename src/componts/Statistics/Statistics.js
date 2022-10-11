@@ -1,25 +1,22 @@
 import React from 'react';
-import { ArrowSmallRightIcon } from '@heroicons/react/24/solid'
-import { Link } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
+import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
-const Statistics = ({data}) => {
-    const {logo, name, total} = data;
+const Statistics = () => {
+    const data = useLoaderData().data;
+
     return (
-        <div>
-            <div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50  bg-slate-700">
-                <div>    
-	                <img src={logo} alt="" className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
-                </div>
-	<div className="mt-6 mb-2">
-		<span className="block text-xs font-medium tracking-widest uppercase dark:text-violet-400"></span>
-		<h2 className="text-xl font-semibold tracking-wide text-yellow-50">{name}</h2>
-        <div className='mt-4 flex align-center'>
-        <h2 className='text-yellow-50 p-3 bg-slate-600 rounded-lg mr-5'>Total Quiz: {total}</h2>
-        <button className='bg-gray-800 hover:bg-slate-900 font-semibold p-2 rounded-lg flex  text-yellow-50'> <Link to='/quiz'>Start Quiz</Link><ArrowSmallRightIcon className='h-5 w-5 my-1' /></button>
+        <div className='mt-6'>
+            <LineChart width={730} height={250} data={data}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="total" stroke="#8884d8" />
+            </LineChart>
         </div>
-	</div>
-  </div>
-</div>
     );
 };
 

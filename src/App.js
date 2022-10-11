@@ -22,6 +22,7 @@ function App() {
         },
         {
           path: '/statistics', 
+          loader:() => fetch('https://openapi.programming-hero.com/api/quiz') ,
           element: <Statistics></Statistics>
         },
         {
@@ -29,8 +30,8 @@ function App() {
           element: <Blog></Blog>
         },
         {
-          path: '/quiz',
-          loader: () => fetch('https://openapi.programming-hero.com/api/quiz/${id'),
+          path: '/quiz/:quizId',
+          loader: async ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
           element: <Quiz></Quiz>
         }
       ]

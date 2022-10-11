@@ -1,12 +1,11 @@
 import React from 'react';
-import LinChart from './LineChart/LineChart';
 
 const Blog = () => {
     return (
         <div>
             <div className='font-medium mt-10 flex gap-5 container ml-20'>
             <div className='border-solid border-2 border-sky-500 w-5/12'>
-            <h2 className='font-bold pt-5'>1. What is parpas of react router?</h2>
+            <h2 className='font-bold pt-5'>c</h2>
             <p>React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
             </p>
             </div>
@@ -22,7 +21,6 @@ const Blog = () => {
             </div>
             
         </div>
-            <LinChart></LinChart>
      </div>
     );
 };
