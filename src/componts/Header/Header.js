@@ -15,7 +15,7 @@ const Header = () => {
 		</Link>
 		<ul className='items-stretch hidden space-x-3 lg:flex'>
 			<li className="flex hover:bg-cyan-200">
-				<Link rel="noopener noreferrer" to="/" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Topics</Link>
+				<Link rel="noopener noreferrer" to="/" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Home</Link>
 			</li>
 			<li className="flex hover:bg-cyan-200">
 				<Link rel="noopener noreferrer" to="/statistics" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Statistics</Link>
